@@ -1,5 +1,5 @@
 <div *ngIf="countries.length === 0; else table" class="alert alert-warning text-center">
-  No hay países que mostrar
+  No hay información para mostrar
 </div>
 
 <ng-template #table>
@@ -25,7 +25,7 @@
       <td>{{country.name.common}}</td>
       <td>{{country.capital}}</td>
       <td>{{country.population | number}}</td>
-      <td><a [routerLink]="['/countries/by', country.cca3]" class="text-primary">Info</a></td>
+      <td><a [routerLink]="['/countries/by', country.cca3]" class="text-primary bg-transparent">Info</a></td>
     </tr>
   </table>
 </ng-template>
